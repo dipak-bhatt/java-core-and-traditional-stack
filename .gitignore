@@ -1,0 +1,48 @@
+# Compiled output
+*.class
+target/
+build/
+out/
+bin/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+*.launch
+.factorypath
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NetBeans
+nbproject/
+nbbuild/
+nbdist/
+dist/
+
+# VS Code
+.vscode/
+
+# Gradle
+.gradle/
+
+# Tomcat and packaged web applications
+apache-tomcat-*/
+tomcat/
+*.war
+*.ear
+
+# Logs and crash dumps
+*.log
+hs_err_pid*
+replay_pid*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

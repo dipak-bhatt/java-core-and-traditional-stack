@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    id="WebApp_ID" version="4.0">
+
+    <display-name>jsp-basics</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>appName</param-name>
+        <param-value>JSP Basics</param-value>
+    </context-param>
+
+    <!-- Register a JSP as a servlet to give it an init-param and a clean URL. -->
+    <servlet>
+        <servlet-name>implicit-objects</servlet-name>
+        <jsp-file>/implicit-objects.jsp</jsp-file>
+        <init-param>
+            <param-name>myConfigParam</param-name>
+            <param-value>Hello from JSP config</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>implicit-objects</servlet-name>
+        <url-pattern>/implicit</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error-page.jsp</location>
+    </error-page>
+
+</web-app>
