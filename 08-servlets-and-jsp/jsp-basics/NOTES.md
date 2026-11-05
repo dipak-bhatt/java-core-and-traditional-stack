@@ -1524,8 +1524,16 @@ jsp-basics/
 
 ### 12.5 Add the JAR files (if needed)
 
-Tomcat provides the servlet and JSP APIs at run time, so you usually do **not**
-need to add `servlet-api.jar` or `jsp-api.jar` manually.
+Tomcat provides the servlet and JSP APIs at run time, so when you use the
+**Targeted Runtime** you do **not** need to add `servlet-api.jar`,
+`jsp-api.jar`, or `el-api.jar` manually.
+
+The `WEB-INF/lib` folder is intentionally **not committed** to this
+repository. If you need these API jars for offline compilation, copy
+`servlet-api.jar`, `jsp-api.jar`, and `el-api.jar` from your Tomcat 9
+installation (`lib/`) into `src/main/webapp/WEB-INF/lib/`. Eclipse
+automatically puts jars from `WEB-INF/lib` on the build path; at run time
+Tomcat uses its own API classes.
 
 If Eclipse shows "The import javax.servlet cannot be resolved":
 

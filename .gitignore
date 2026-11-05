@@ -33,9 +33,14 @@ dist/
 
 # Tomcat and packaged web applications
 apache-tomcat-*/
+apache-tomcat-*.zip
+apache-tomcat-*.tar.gz
 tomcat/
 *.war
 *.ear
+
+# Web application libraries (provided by Tomcat; add locally when needed)
+**/WEB-INF/lib/
 
 # Logs and crash dumps
 *.log

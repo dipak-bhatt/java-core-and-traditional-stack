@@ -1258,8 +1258,14 @@ servlet-basics/
 
 ### 10.5 Add the JAR files (if needed)
 
-Tomcat's servlet API is provided by the runtime, so you usually do **not**
-need to add `servlet-api.jar` manually.
+Tomcat's servlet API is provided by the runtime, so when you use a **Targeted
+Runtime** you do **not** need to add `servlet-api.jar` manually.
+
+The `WEB-INF/lib` folder is intentionally **not committed** to this
+repository. If you need the API jar for offline compilation, copy
+`lib/servlet-api.jar` from your Tomcat 9 installation into
+`src/main/webapp/WEB-INF/lib/`. Eclipse automatically puts jars from
+`WEB-INF/lib` on the build path; at run time Tomcat uses its own API classes.
 
 If Eclipse shows "The import javax.servlet cannot be resolved", fix the
 targeted runtime:
